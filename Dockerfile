@@ -1,12 +1,12 @@
-#»ùÓÚcentos6µÄlnmpÒ»¼ü°ü
+#åŸºäºcentos6çš„lnmpä¸€é”®åŒ…
 
 FROM tutum/centos:centos6
 MAINTAINER www.9ikj.cn
 
-#¸üĞÂ
+#æ›´æ–°
 RUN yum -y update
 
-#°²×°SSH
+#å®‰è£…SSH
 RUN yum -y install openssh-server epel-release && \
     yum -y install pwgen && \
     rm -f /etc/ssh/ssh_host_ecdsa_key /etc/ssh/ssh_host_rsa_key && \
@@ -15,11 +15,11 @@ RUN yum -y install openssh-server epel-release && \
     sed -i "s/#UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && \
     sed -i "s/UsePAM.*/UsePAM yes/g" /etc/ssh/sshd_config
 
-#°²×°wget tar
+#å®‰è£…wget tar
 RUN yum -y install wget && \
     yum -y install tar
 
-#ÏÂÔØ°²×°Ò»¼ü°ü
+#ä¸‹è½½å®‰è£…ä¸€é”®åŒ…
 RUN wget -c http://static.suod.ga/lnmp/lnmp1.2-full.tar.gz && \
     tar zxf lnmp1.2-full.tar.gz
 WORKDIR lnmp1.2-full
@@ -30,11 +30,11 @@ ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
-#¹ÒÔØµã
+#æŒ‚è½½ç‚¹
 VOLUME ["/home/wwwroot"]
 
-#¶Ë¿Ú
+#ç«¯å£
 EXPOSE 22 80
 
-#ÔËĞĞ
+#è¿è¡Œ
 CMD ["/run.sh"]
