@@ -21,17 +21,12 @@ RUN yum -y install wget && \
 
 #下载安装一键包
 RUN wget -c http://static.suod.ga/lnmp/lnmp1.2-full.tar.gz && \
-    tar zxf lnmp1.2-full.tar.gz
-WORKDIR lnmp1.2-full
-RUN ./install.sh lnmp && \
+    tar zxf lnmp1.2-full.tar.gz && \
     rm -rf /root/lnmp1.2-full.tar.gz
 WORKDIR /
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
-
-#挂载点
-VOLUME ["/home/wwwroot"]
 
 #端口
 EXPOSE 22 80
