@@ -20,7 +20,7 @@ RUN yum -y install wget && \
     yum -y install tar
 
 #下载安装一键包
-RUN wget -c http://static.suod.ga/lnmp/lnmp1.2-full.tar.gz && \
+RUN wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz && \
     tar zxf lnmp1.2-full.tar.gz && \
     rm -rf /root/lnmp1.2-full.tar.gz
 WORKDIR /
