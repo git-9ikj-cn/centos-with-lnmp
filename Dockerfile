@@ -1,4 +1,4 @@
-#基于centos6的lnmp一键包
+#基于centos6的已下载lnmp在root目录
 
 FROM tutum/centos:centos6
 MAINTAINER www.9ikj.cn
@@ -19,17 +19,17 @@ RUN yum -y install openssh-server epel-release && \
 RUN yum -y install wget && \
     yum -y install tar
 
-#下载安装一键包
+#下载安装一键包解压到root
 RUN wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz && \
-    tar zxf lnmp1.2-full.tar.gz && \
-    rm -rf /root/lnmp1.2-full.tar.gz
-WORKDIR /
+    tar zxf lnmp1.2-full.tar.gz /root && \
+    rm -rf lnmp1.2-full.tar.gz
+
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
 #端口
-EXPOSE 22 80
+EXPOSE 22 80 3306
 
 #运行
 CMD ["/run.sh"]
