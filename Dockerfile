@@ -21,7 +21,7 @@ RUN yum -y install wget && \
 
 #下载安装一键包解压到root
 RUN wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz && \
-    tar zxf lnmp1.2-full.tar.gz /root && \
+    tar zxf lnmp1.2-full.tar.gz && \
     rm -rf lnmp1.2-full.tar.gz
 
 ADD set_root_pw.sh /set_root_pw.sh
