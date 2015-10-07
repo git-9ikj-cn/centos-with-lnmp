@@ -17,7 +17,8 @@ RUN yum -y install openssh-server epel-release && \
 
 #安装wget tar
 RUN yum -y install wget && \
-    yum -y install tar
+    yum -y install tar && \
+    yum -y install screen
 
 #下载安装一键包解压到root
 RUN wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz && \
