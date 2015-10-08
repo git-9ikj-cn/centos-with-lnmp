@@ -30,6 +30,7 @@ EXPOSE 22 80 3306
 
 #变量
 ENV AUTHORIZED_KEYS **None**
+ENV ROOT_PASS **RANDOM**
 
 #挂载
 VOLUME ['/home']
