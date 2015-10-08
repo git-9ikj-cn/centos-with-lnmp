@@ -1,10 +1,7 @@
 #基于centos6的已下载lnmp在root目录
 
-FROM tutum/centos:centos6
+FROM centos:centos6
 MAINTAINER www.9ikj.cn
-
-#更新
-RUN yum -y update
 
 #安装SSH
 RUN yum -y install openssh-server epel-release && \
