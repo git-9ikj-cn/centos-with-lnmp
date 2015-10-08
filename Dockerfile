@@ -31,6 +31,7 @@ EXPOSE 22 80 3306
 
 #变量
 ENV AUTHORIZED_KEYS **None**
+
 #挂载
 VOLUME ['/home']
 
