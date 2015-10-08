@@ -7,5 +7,5 @@ ROOT_PASS：Password<br/>
 1)连接SSH<br/>
 2)安装：<br/>
 
-screen -S lnmp<br/>//创建多重视窗管理程序
-cd lnmp1.2-full && ./install.sh lnmp<br/>//安装
+screen -S lnmp//创建多重视窗管理程序<br/>
+cd lnmp1.2-full && ./install.sh lnmp//安装<br/>
