@@ -7,8 +7,9 @@ ROOT_PASS：Password<br/>
 + 1)连接SSH<br/>
 + 2)安装：<br/>
 screen -S lnmp<br/>
-*如果SSH断线了可以再次登录SSH使用：screen -r lnmp来恢复进程<br/>
+如果SSH断线了可以再次登录SSH使用：screen -r lnmp来恢复进程<br/>
 cd lnmp1.2-full && ./install.sh lnmp<br/>
+---------------------------------------
 需要设置MySQL的root密码（不输入直接回车将会设置为**root**），输入后回车进入下一步<br/>
 这里需要确认是否启用MySQL InnoDB，如果不确定是否启用可以输入 y ，输入 y 表示启用，输入 n 表示不启用。默认为y启用，输入后回车进入下一步选择MySQL版本<br/>
 输入PHP版本的序号，回车进入下一步，选择是否安装内存优化，可以选择不安装、Jemalloc或TCmalloc，输入对应序号回车。<br/>
