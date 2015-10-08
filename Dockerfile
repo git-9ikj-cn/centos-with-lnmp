@@ -1,6 +1,6 @@
 #基于centos6的已下载lnmp在root目录
 FROM centos:centos6
-MAINTAINER www.9ikj.cn
+MAINTAINER Jiu Ai <admin@9ikj.cn>
 
 #安装SSH
 RUN yum -y install openssh-server epel-release && \
