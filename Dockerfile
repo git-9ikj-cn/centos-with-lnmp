@@ -29,5 +29,10 @@ RUN chmod +x /*.sh
 #端口
 EXPOSE 22 80 3306
 
+#变量
+ENV AUTHORIZED_KEYS **None**
+#挂载
+VOLUME ['/home']
+
 #运行
 CMD ["/run.sh"]
