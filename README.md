@@ -4,7 +4,8 @@
 ROOT_PASS：Password<br/>
 不设置为自动生成ROOT_PASS<br/>
 <h2>二、采用官网的lnmp一键包</h2>
-1)连接SSH<br/>
-2)安装：<br/>
+<li>1)连接SSH</li>
+<li>2)安装：<br/>
 screen -S lnmp<br/>
 cd lnmp1.2-full && ./install.sh lnmp<br/>
+输入MySQL密码，回车默认*root*
