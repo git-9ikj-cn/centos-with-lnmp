@@ -5,5 +5,5 @@ ROOT_PASS：Password<br/>
 不设置为自动生成ROOT_PASS<br/>
 <h2>二、采用官网的lnmp一键包</h2>
 安装：<br/>
-cd root<br/>
-./<br/>
+screen -S lnmp<br/>
+cd /root/lnmp1.2-full && ./install.sh lnmp<br/>
