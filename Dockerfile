@@ -33,7 +33,7 @@ ENV AUTHORIZED_KEYS **None**
 ENV ROOT_PASS **RANDOM**
 
 #挂载
-VOLUME ['/home']
+VOLUME ["/home"]
 
 #运行
 CMD ["/run.sh"]
