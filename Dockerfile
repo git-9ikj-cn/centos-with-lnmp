@@ -1,4 +1,4 @@
-#Centos6 with LNMP.
+#Centos with LNMP.
 FROM centos:latest
 MAINTAINER Jiu Ai <admin@9ikj.cn>
 
