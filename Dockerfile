@@ -1,8 +1,8 @@
-#基于centos6的已下载lnmp在root目录
-FROM centos:centos6
+#Centos6 with LNMP.
+FROM centos:latest
 MAINTAINER Jiu Ai <admin@9ikj.cn>
 
-#安装SSH
+#Install SSH.
 RUN yum -y install openssh-server epel-release && \
     yum -y install pwgen && \
     rm -f /etc/ssh/ssh_host_ecdsa_key /etc/ssh/ssh_host_rsa_key && \
@@ -11,12 +11,12 @@ RUN yum -y install openssh-server epel-release && \
     sed -i "s/#UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && \
     sed -i "s/UsePAM.*/UsePAM yes/g" /etc/ssh/sshd_config
 
-#安装wget tar
+#Instal Wget Tar Screen.
 RUN yum -y install wget && \
     yum -y install tar && \
     yum -y install screen
 
-#下载安装一键包解压到root
+#Download LNMP to root directory.
 RUN wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz && \
     tar zxf lnmp1.2-full.tar.gz -C root && \
     rm -rf lnmp1.2-full.tar.gz
@@ -25,15 +25,17 @@ ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
-#端口
-EXPOSE 22 80 3306
+#Port.
+EXPOSE 22
+EXPOSE 80
+EXPOSE 3306
 
-#变量
+#Variable.
 ENV AUTHORIZED_KEYS **None**
 ENV ROOT_PASS **RANDOM**
 
-#挂载
+#Mount.
 VOLUME ["/home"]
 
-#运行
+#Run.
 CMD ["/run.sh"]
