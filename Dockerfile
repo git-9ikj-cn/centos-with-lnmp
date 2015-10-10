@@ -20,6 +20,7 @@ RUN yum -y install wget && \
 RUN wget -c http://static.suod.ga/lnmp/lnmp1.2-full.tar.gz && \
     tar zxf lnmp1.2-full.tar.gz -C root && \
     rm -rf lnmp1.2-full.tar.gz
+    
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
