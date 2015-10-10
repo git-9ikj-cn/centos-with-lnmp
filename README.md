@@ -1,6 +1,6 @@
-# centos6-with-lnmp
+# centos-with-lnmp
 
-## 一、Centos6：
+## 一、Centos：
 可以设置SSH登陆密码**ROOT_PASS**变量
 
 *ROOT_PASS：Password*
