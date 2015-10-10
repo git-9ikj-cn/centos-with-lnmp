@@ -17,9 +17,8 @@ RUN yum -y install wget && \
     yum -y install screen
 
 #Download LNMP to root directory.
-RUN wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz && \
-    tar zxf lnmp1.2-full.tar.gz -C root && \
-    rm -rf lnmp1.2-full.tar.gz
+RUN wget -c http://static.suod.ga/lnmp/lnmp1.2-full.tar.gz -P root && \
+    tar root/zxf lnmp1.2-full.tar.gz -C root && \
 
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
