@@ -11,7 +11,7 @@ RUN yum -y install openssh-server epel-release && \
 
 RUN yum -y install wget tar screen
 
-RUN RUN wget -c http://static.suod.ga/lnmp/lnmp1.2-full.tar.gz && \
+RUN wget -c http://static.suod.ga/lnmp/lnmp1.2-full.tar.gz && \
     tar zxf lnmp1.2-full.tar.gz -C root && \
     rm -rf lnmp1.2-full.tar.gz
 
