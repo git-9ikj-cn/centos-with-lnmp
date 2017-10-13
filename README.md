@@ -1,5 +1,5 @@
 # centos-with-lnmp
-
+不再更新
 ## 一、Centos：
 可以设置SSH登陆密码**ROOT_PASS**变量
 
